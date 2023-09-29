@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D140FC02AC65F4A00B7FF0D /* NotesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D140FBF2AC65F4A00B7FF0D /* NotesScreen.swift */; };
+		7D140FC22AC65F5800B7FF0D /* NotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D140FC12AC65F5800B7FF0D /* NotesViewModel.swift */; };
+		7D140FC42AC65F6900B7FF0D /* NotesUiState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D140FC32AC65F6900B7FF0D /* NotesUiState.swift */; };
 		7DEAF2C12AC656C500B6D6BC /* NoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEAF2C02AC656C500B6D6BC /* NoteRepository.swift */; };
 		7DEAF2C52AC656EE00B6D6BC /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEAF2C42AC656EE00B6D6BC /* Note.swift */; };
 		7DEAF2C72AC656FE00B6D6BC /* NoteRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEAF2C62AC656FD00B6D6BC /* NoteRepositoryImpl.swift */; };
 		7DF293A42ABF413800414A6D /* NotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF293A32ABF413800414A6D /* NotesApp.swift */; };
-		7DF293A62ABF413800414A6D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF293A52ABF413800414A6D /* ContentView.swift */; };
 		7DF293A82ABF413900414A6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DF293A72ABF413900414A6D /* Assets.xcassets */; };
 		7DF293AC2ABF413900414A6D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DF293AB2ABF413900414A6D /* Preview Assets.xcassets */; };
 		7DF293B62ABF413900414A6D /* NotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF293B52ABF413900414A6D /* NotesTests.swift */; };
@@ -37,12 +39,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D140FBF2AC65F4A00B7FF0D /* NotesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesScreen.swift; sourceTree = "<group>"; };
+		7D140FC12AC65F5800B7FF0D /* NotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewModel.swift; sourceTree = "<group>"; };
+		7D140FC32AC65F6900B7FF0D /* NotesUiState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesUiState.swift; sourceTree = "<group>"; };
 		7DEAF2C02AC656C500B6D6BC /* NoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteRepository.swift; sourceTree = "<group>"; };
 		7DEAF2C42AC656EE00B6D6BC /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		7DEAF2C62AC656FD00B6D6BC /* NoteRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteRepositoryImpl.swift; sourceTree = "<group>"; };
 		7DF293A02ABF413800414A6D /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DF293A32ABF413800414A6D /* NotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesApp.swift; sourceTree = "<group>"; };
-		7DF293A52ABF413800414A6D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7DF293A72ABF413900414A6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7DF293A92ABF413900414A6D /* Notes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Notes.entitlements; sourceTree = "<group>"; };
 		7DF293AB2ABF413900414A6D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -78,6 +82,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D140FBC2AC65F2200B7FF0D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7D140FBD2AC65F2900B7FF0D /* Screen */,
+			);
+			name = UI;
+			path = Data/UI;
+			sourceTree = "<group>";
+		};
+		7D140FBD2AC65F2900B7FF0D /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				7D140FBE2AC65F3C00B7FF0D /* Notes */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		7D140FBE2AC65F3C00B7FF0D /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				7D140FBF2AC65F4A00B7FF0D /* NotesScreen.swift */,
+				7D140FC12AC65F5800B7FF0D /* NotesViewModel.swift */,
+				7D140FC32AC65F6900B7FF0D /* NotesUiState.swift */,
+			);
+			path = Notes;
+			sourceTree = "<group>";
+		};
 		7DEAF2BF2AC656B000B6D6BC /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,9 +158,9 @@
 		7DF293A22ABF413800414A6D /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				7D140FBC2AC65F2200B7FF0D /* UI */,
 				7DEAF2BF2AC656B000B6D6BC /* Data */,
 				7DF293A32ABF413800414A6D /* NotesApp.swift */,
-				7DF293A52ABF413800414A6D /* ContentView.swift */,
 				7DF293A72ABF413900414A6D /* Assets.xcassets */,
 				7DF293A92ABF413900414A6D /* Notes.entitlements */,
 				7DF293AA2ABF413900414A6D /* Preview Content */,
@@ -293,8 +324,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DEAF2C12AC656C500B6D6BC /* NoteRepository.swift in Sources */,
-				7DF293A62ABF413800414A6D /* ContentView.swift in Sources */,
+				7D140FC22AC65F5800B7FF0D /* NotesViewModel.swift in Sources */,
+				7D140FC02AC65F4A00B7FF0D /* NotesScreen.swift in Sources */,
 				7DF293A42ABF413800414A6D /* NotesApp.swift in Sources */,
+				7D140FC42AC65F6900B7FF0D /* NotesUiState.swift in Sources */,
 				7DEAF2C52AC656EE00B6D6BC /* Note.swift in Sources */,
 				7DEAF2C72AC656FE00B6D6BC /* NoteRepositoryImpl.swift in Sources */,
 			);
