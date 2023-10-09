@@ -6,7 +6,8 @@
 //
 
 import Foundation
+import Combine
 
 protocol NoteRepository {
-    func getNotes() -> [Note]
+    var notes: AnyPublisher<[Note], Never> { get }
 }
