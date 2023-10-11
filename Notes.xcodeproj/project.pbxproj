@@ -10,6 +10,8 @@
 		7D140FC02AC65F4A00B7FF0D /* NotesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D140FBF2AC65F4A00B7FF0D /* NotesScreen.swift */; };
 		7D140FC22AC65F5800B7FF0D /* NotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D140FC12AC65F5800B7FF0D /* NotesViewModel.swift */; };
 		7D140FC42AC65F6900B7FF0D /* NotesUiState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D140FC32AC65F6900B7FF0D /* NotesUiState.swift */; };
+		7D70A68E2AD6D32900856337 /* SwiftUIMasonry in Frameworks */ = {isa = PBXBuildFile; productRef = 7D70A68D2AD6D32900856337 /* SwiftUIMasonry */; };
+		7DD42F7B2AD4BE1C00302197 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD42F7A2AD4BE1C00302197 /* Theme.swift */; };
 		7DEAF2C12AC656C500B6D6BC /* NoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEAF2C02AC656C500B6D6BC /* NoteRepository.swift */; };
 		7DEAF2C52AC656EE00B6D6BC /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEAF2C42AC656EE00B6D6BC /* Note.swift */; };
 		7DEAF2C72AC656FE00B6D6BC /* NoteRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEAF2C62AC656FD00B6D6BC /* NoteRepositoryImpl.swift */; };
@@ -42,6 +44,7 @@
 		7D140FBF2AC65F4A00B7FF0D /* NotesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesScreen.swift; sourceTree = "<group>"; };
 		7D140FC12AC65F5800B7FF0D /* NotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewModel.swift; sourceTree = "<group>"; };
 		7D140FC32AC65F6900B7FF0D /* NotesUiState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesUiState.swift; sourceTree = "<group>"; };
+		7DD42F7A2AD4BE1C00302197 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		7DEAF2C02AC656C500B6D6BC /* NoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteRepository.swift; sourceTree = "<group>"; };
 		7DEAF2C42AC656EE00B6D6BC /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		7DEAF2C62AC656FD00B6D6BC /* NoteRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteRepositoryImpl.swift; sourceTree = "<group>"; };
@@ -62,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D70A68E2AD6D32900856337 /* SwiftUIMasonry in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +89,7 @@
 		7D140FBC2AC65F2200B7FF0D /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				7DD42F792AD4BE0F00302197 /* Theme */,
 				7D140FBD2AC65F2900B7FF0D /* Screen */,
 			);
 			name = UI;
@@ -107,6 +112,14 @@
 				7D140FC32AC65F6900B7FF0D /* NotesUiState.swift */,
 			);
 			path = Notes;
+			sourceTree = "<group>";
+		};
+		7DD42F792AD4BE0F00302197 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				7DD42F7A2AD4BE1C00302197 /* Theme.swift */,
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 		7DEAF2BF2AC656B000B6D6BC /* Data */ = {
@@ -209,6 +222,9 @@
 			dependencies = (
 			);
 			name = Notes;
+			packageProductDependencies = (
+				7D70A68D2AD6D32900856337 /* SwiftUIMasonry */,
+			);
 			productName = Notes;
 			productReference = 7DF293A02ABF413800414A6D /* Notes.app */;
 			productType = "com.apple.product-type.application";
@@ -281,6 +297,9 @@
 				Base,
 			);
 			mainGroup = 7DF293972ABF413800414A6D;
+			packageReferences = (
+				7D70A68C2AD6D32900856337 /* XCRemoteSwiftPackageReference "SwiftUIMasonry" */,
+			);
 			productRefGroup = 7DF293A12ABF413800414A6D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -324,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DEAF2C12AC656C500B6D6BC /* NoteRepository.swift in Sources */,
+				7DD42F7B2AD4BE1C00302197 /* Theme.swift in Sources */,
 				7D140FC22AC65F5800B7FF0D /* NotesViewModel.swift in Sources */,
 				7D140FC02AC65F4A00B7FF0D /* NotesScreen.swift in Sources */,
 				7DF293A42ABF413800414A6D /* NotesApp.swift in Sources */,
@@ -678,6 +698,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7D70A68C2AD6D32900856337 /* XCRemoteSwiftPackageReference "SwiftUIMasonry" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ciaranrobrien/SwiftUIMasonry";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7D70A68D2AD6D32900856337 /* SwiftUIMasonry */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7D70A68C2AD6D32900856337 /* XCRemoteSwiftPackageReference "SwiftUIMasonry" */;
+			productName = SwiftUIMasonry;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7DF293982ABF413800414A6D /* Project object */;
 }
