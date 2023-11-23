@@ -40,7 +40,7 @@ struct NotesScreen: View {
                         Text(text)
                             .padding(EdgeInsets(top: 0, leading: 40, bottom: 0, trailing: 0))
                         Spacer()
-                        Button(action: { viewModel.addNote() }) {
+                        NavigationLink(destination: NoteEditingScreen()) {
                             Image(systemName: "square.and.pencil").imageScale(.large)
                         }
                     }
