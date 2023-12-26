@@ -15,6 +15,7 @@
 		7D76A9BB2B0FE3960017F1B5 /* NoteEditingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D76A9BA2B0FE3960017F1B5 /* NoteEditingViewModel.swift */; };
 		7D76A9BD2B0FE3D30017F1B5 /* NoteEditingUiState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D76A9BC2B0FE3D30017F1B5 /* NoteEditingUiState.swift */; };
 		7DD42F7B2AD4BE1C00302197 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD42F7A2AD4BE1C00302197 /* Theme.swift */; };
+		7DE6D13F2B3B161F0081A5BE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE6D13E2B3B161F0081A5BE /* ContentView.swift */; };
 		7DEAF2C12AC656C500B6D6BC /* NoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEAF2C02AC656C500B6D6BC /* NoteRepository.swift */; };
 		7DEAF2C52AC656EE00B6D6BC /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEAF2C42AC656EE00B6D6BC /* Note.swift */; };
 		7DEAF2C72AC656FE00B6D6BC /* NoteRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEAF2C62AC656FD00B6D6BC /* NoteRepositoryImpl.swift */; };
@@ -51,6 +52,7 @@
 		7D76A9BA2B0FE3960017F1B5 /* NoteEditingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditingViewModel.swift; sourceTree = "<group>"; };
 		7D76A9BC2B0FE3D30017F1B5 /* NoteEditingUiState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditingUiState.swift; sourceTree = "<group>"; };
 		7DD42F7A2AD4BE1C00302197 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		7DE6D13E2B3B161F0081A5BE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7DEAF2C02AC656C500B6D6BC /* NoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteRepository.swift; sourceTree = "<group>"; };
 		7DEAF2C42AC656EE00B6D6BC /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		7DEAF2C62AC656FD00B6D6BC /* NoteRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteRepositoryImpl.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			children = (
 				7D140FBC2AC65F2200B7FF0D /* UI */,
 				7DEAF2BF2AC656B000B6D6BC /* Data */,
+				7DE6D13E2B3B161F0081A5BE /* ContentView.swift */,
 				7DF293A32ABF413800414A6D /* NotesApp.swift */,
 				7DF293A72ABF413900414A6D /* Assets.xcassets */,
 				7DF293A92ABF413900414A6D /* Notes.entitlements */,
@@ -290,7 +293,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1510;
 				TargetAttributes = {
 					7DF2939F2ABF413800414A6D = {
 						CreatedOnToolsVersion = 15.0;
@@ -361,6 +364,7 @@
 			files = (
 				7D76A9BD2B0FE3D30017F1B5 /* NoteEditingUiState.swift in Sources */,
 				7DEAF2C12AC656C500B6D6BC /* NoteRepository.swift in Sources */,
+				7DE6D13F2B3B161F0081A5BE /* ContentView.swift in Sources */,
 				7D76A9BB2B0FE3960017F1B5 /* NoteEditingViewModel.swift in Sources */,
 				7DD42F7B2AD4BE1C00302197 /* Theme.swift in Sources */,
 				7D140FC22AC65F5800B7FF0D /* NotesViewModel.swift in Sources */,
@@ -440,6 +444,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -501,6 +506,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -528,6 +534,7 @@
 				CODE_SIGN_ENTITLEMENTS = Notes/Notes.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Notes/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -564,6 +571,7 @@
 				CODE_SIGN_ENTITLEMENTS = Notes/Notes.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Notes/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -599,6 +607,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 13.6;
@@ -621,6 +630,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 13.6;
@@ -642,6 +652,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 13.6;
@@ -663,6 +674,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 13.6;

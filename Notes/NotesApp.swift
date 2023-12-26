@@ -7,11 +7,18 @@
 
 import SwiftUI
 
+class Dependencies: ObservableObject {
+    let noteRepo: NoteRepository = NoteRepositoryImpl()
+}
+
 @main
 struct NotesApp: App {
+    @StateObject private var dependencies = Dependencies()
+    
     var body: some Scene {
         WindowGroup {
-            NotesScreen()
+            ContentView()
+                .environmentObject(dependencies)
         }
     }
 }

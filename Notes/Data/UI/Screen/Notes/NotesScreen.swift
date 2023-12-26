@@ -9,19 +9,28 @@ import SwiftUI
 import SwiftUIMasonry
 
 struct NotesScreen: View {
-    @ObservedObject var viewModel = NotesViewModel()
+    @EnvironmentObject private var dependencies: Dependencies
+    
+    @StateObject private var viewModel: NotesViewModel
+
+    init(dependencies: Dependencies) {
+        _viewModel = StateObject(wrappedValue: NotesViewModel(noteRepo: dependencies.noteRepo))
+    }
     
     var body: some View {
         NavigationView {
             ScrollView(.vertical) {
                 VMasonry(columns: 2, spacing: 8) {
-                    ForEach(viewModel.uiState.notes, id: \.text) {
-                        Text($0.text)
-                            .lineLimit(10)
-                            .frame(maxWidth: .infinity, alignment: .topLeading)
-                            .padding(16)
-                            .background(Color(uiColor: .secondarySystemBackground))
-                            .cornerRadius(8)
+                    ForEach(viewModel.uiState.notes, id: \.id) { note in
+                        NavigationLink(destination: NoteEditingScreen(noteId: note.id, dependencies: dependencies)) {
+                            Text(note.text)
+                                .lineLimit(10)
+                                .frame(maxWidth: .infinity, alignment: .topLeading)
+                                .padding(16)
+                                .background(Color(uiColor: .secondarySystemBackground))
+                                .cornerRadius(8)
+                        }
+                        .buttonStyle(PlainButtonStyle())
                     }
                 }
                 .padding(16)
@@ -40,7 +49,7 @@ struct NotesScreen: View {
                         Text(text)
                             .padding(EdgeInsets(top: 0, leading: 40, bottom: 0, trailing: 0))
                         Spacer()
-                        NavigationLink(destination: NoteEditingScreen()) {
+                        NavigationLink(destination: NoteEditingScreen(dependencies: dependencies)) {
                             Image(systemName: "square.and.pencil").imageScale(.large)
                         }
                     }

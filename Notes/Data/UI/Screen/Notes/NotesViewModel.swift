@@ -11,28 +11,19 @@ import Combine
 class NotesViewModel: ObservableObject {
     @Published var uiState = NotesUiState()
     
-    let notesRepo = NoteRepositoryImpl()
+    private let noteRepo: NoteRepository
     
     var subscription: AnyCancellable? = nil
     
-    init() {
+    init(noteRepo: NoteRepository) {
+        self.noteRepo = noteRepo
         loadNotes()
     }
     
     func loadNotes() {
-        subscription = notesRepo.notes.sink { notes in
+        subscription = noteRepo.notes.sink { notes in
             self.uiState = NotesUiState(notes: notes)
         }
-    }
-    
-    func addNote() {
-        let noteCount = uiState.notes.count + 1
-        let text = if (noteCount % 2 == 0) {
-            "This is note  \(noteCount).\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Integer congue metus accumsan aliquet vestibulum. Sed pellentesque diam tincidunt ligula sollicitudin porttitor."
-        } else {
-            "This is note \(noteCount)."
-        }
-        notesRepo.addNote(note: Note(text: text))
     }
     
     deinit {

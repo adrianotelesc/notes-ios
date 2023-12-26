@@ -7,6 +7,10 @@
 
 import Foundation
 
-class NoteEditingUiState {
+struct NoteEditingUiState {
+    let note: Note
     
+    init(note: Note = Note()) {
+        self.note = note
+    }
 }
