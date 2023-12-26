@@ -35,24 +35,28 @@ class NoteRepositoryImpl: NoteRepository {
         guard note.isNotEmpty else {
             return
         }
+        sendNotesSubject { ( notes: inout [Note]) in
+            notes.insert(note, at: 0)
+        }
+    }
+    
+    private func sendNotesSubject(block: (inout [Note]) -> Void) {
         var notes = notesSubject.value
-        notes.insert(note, at: 0)
+        block(&notes)
         notesSubject.send(notes)
     }
     
     func remove(note: Note) {
-        var notes = notesSubject.value
-        notes.removeAll { item in
-            item.id == note.id
-        }   
-        notesSubject.send(notes)
+        sendNotesSubject { ( notes: inout [Note]) in
+            notes.removeAll { item in item.id == note.id }
+        }
     }
     
     func replace(oldNote: Note, newNote: Note) {
-        var notes = notesSubject.value
-        let index = notes.firstIndex(where:  { note in oldNote.id == note.id }) ?? 0
-        notes.remove(at: index)
-        notes.insert(newNote, at: index)
-        notesSubject.send(notes)
+        sendNotesSubject { ( notes: inout [Note]) in
+            let index = notes.firstIndex(where: { note in oldNote.id == note.id }) ?? 0
+            notes.remove(at: index)
+            notes.insert(newNote, at: index)
+        }
     }
 }
