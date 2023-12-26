@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct NoteEditingScreen: View {
-    @FocusState private var focused: Bool?
+    @FocusState private var focused: Bool
     
     @State private var text: String = ""
     
@@ -29,7 +29,7 @@ struct NoteEditingScreen: View {
                 self.focused = note.isEmpty
             })
             .onChange(of: text) {
-                viewModel.updateText(text: text)
+                viewModel.updateNote(text: text)
             }
             .autocorrectionDisabled()
             .textInputAutocapitalization(.none)

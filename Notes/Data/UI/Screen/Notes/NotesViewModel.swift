@@ -9,24 +9,24 @@ import Foundation
 import Combine
 
 class NotesViewModel: ObservableObject {
-    @Published var uiState = NotesUiState()
-    
     private let noteRepo: NoteRepository
+    private var notesSubscription: AnyCancellable? = nil
     
-    var subscription: AnyCancellable? = nil
+    @Published var uiState = NotesUiState()
     
     init(noteRepo: NoteRepository) {
         self.noteRepo = noteRepo
+
         loadNotes()
     }
     
     func loadNotes() {
-        subscription = noteRepo.notes.sink { notes in
+        notesSubscription = noteRepo.notes.sink { notes in
             self.uiState = NotesUiState(notes: notes)
         }
     }
     
     deinit {
-        subscription?.cancel()
+        notesSubscription?.cancel()
     }
 }

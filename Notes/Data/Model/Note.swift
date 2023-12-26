@@ -23,4 +23,8 @@ struct Note: Equatable {
     var isNotEmpty: Bool {
         return !isEmpty
     }
+    
+    func copy(text: String) -> Note {
+        return Note(id: self.id, text: text)
+    }
 }

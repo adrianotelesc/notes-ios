@@ -25,6 +25,7 @@ struct NotesScreen: View {
                         NavigationLink(destination: NoteEditingScreen(noteId: note.id, dependencies: dependencies)) {
                             Text(note.text)
                                 .lineLimit(10)
+                                .truncationMode(.tail)
                                 .frame(maxWidth: .infinity, alignment: .topLeading)
                                 .padding(16)
                                 .background(Color(uiColor: .secondarySystemBackground))
@@ -53,7 +54,6 @@ struct NotesScreen: View {
                             Image(systemName: "square.and.pencil").imageScale(.large)
                         }
                     }
-                
                 }
             }
         }
