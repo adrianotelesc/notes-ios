@@ -56,14 +56,14 @@
 		7DEAF2C02AC656C500B6D6BC /* NoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteRepository.swift; sourceTree = "<group>"; };
 		7DEAF2C42AC656EE00B6D6BC /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		7DEAF2C62AC656FD00B6D6BC /* NoteRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteRepositoryImpl.swift; sourceTree = "<group>"; };
-		7DF293A02ABF413800414A6D /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DF293A02ABF413800414A6D /* Postnote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Postnote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DF293A32ABF413800414A6D /* NotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesApp.swift; sourceTree = "<group>"; };
 		7DF293A72ABF413900414A6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7DF293A92ABF413900414A6D /* Notes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Notes.entitlements; sourceTree = "<group>"; };
+		7DF293A92ABF413900414A6D /* Postnote.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Postnote.entitlements; sourceTree = "<group>"; };
 		7DF293AB2ABF413900414A6D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		7DF293B12ABF413900414A6D /* NotesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DF293B12ABF413900414A6D /* PostnoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostnoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DF293B52ABF413900414A6D /* NotesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTests.swift; sourceTree = "<group>"; };
-		7DF293BB2ABF413900414A6D /* NotesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DF293BB2ABF413900414A6D /* PostnoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostnoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DF293BF2ABF413900414A6D /* NotesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesUITests.swift; sourceTree = "<group>"; };
 		7DF293C12ABF413900414A6D /* NotesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -170,9 +170,9 @@
 		7DF293972ABF413800414A6D = {
 			isa = PBXGroup;
 			children = (
-				7DF293A22ABF413800414A6D /* Notes */,
-				7DF293B42ABF413900414A6D /* NotesTests */,
-				7DF293BE2ABF413900414A6D /* NotesUITests */,
+				7DF293A22ABF413800414A6D /* Postnote */,
+				7DF293B42ABF413900414A6D /* PostnoteTests */,
+				7DF293BE2ABF413900414A6D /* PostnoteUITests */,
 				7DF293A12ABF413800414A6D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -180,14 +180,14 @@
 		7DF293A12ABF413800414A6D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7DF293A02ABF413800414A6D /* Notes.app */,
-				7DF293B12ABF413900414A6D /* NotesTests.xctest */,
-				7DF293BB2ABF413900414A6D /* NotesUITests.xctest */,
+				7DF293A02ABF413800414A6D /* Postnote.app */,
+				7DF293B12ABF413900414A6D /* PostnoteTests.xctest */,
+				7DF293BB2ABF413900414A6D /* PostnoteUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7DF293A22ABF413800414A6D /* Notes */ = {
+		7DF293A22ABF413800414A6D /* Postnote */ = {
 			isa = PBXGroup;
 			children = (
 				7D140FBC2AC65F2200B7FF0D /* UI */,
@@ -195,10 +195,10 @@
 				7DE6D13E2B3B161F0081A5BE /* ContentView.swift */,
 				7DF293A32ABF413800414A6D /* NotesApp.swift */,
 				7DF293A72ABF413900414A6D /* Assets.xcassets */,
-				7DF293A92ABF413900414A6D /* Notes.entitlements */,
+				7DF293A92ABF413900414A6D /* Postnote.entitlements */,
 				7DF293AA2ABF413900414A6D /* Preview Content */,
 			);
-			path = Notes;
+			path = Postnote;
 			sourceTree = "<group>";
 		};
 		7DF293AA2ABF413900414A6D /* Preview Content */ = {
@@ -209,29 +209,29 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		7DF293B42ABF413900414A6D /* NotesTests */ = {
+		7DF293B42ABF413900414A6D /* PostnoteTests */ = {
 			isa = PBXGroup;
 			children = (
 				7DF293B52ABF413900414A6D /* NotesTests.swift */,
 			);
-			path = NotesTests;
+			path = PostnoteTests;
 			sourceTree = "<group>";
 		};
-		7DF293BE2ABF413900414A6D /* NotesUITests */ = {
+		7DF293BE2ABF413900414A6D /* PostnoteUITests */ = {
 			isa = PBXGroup;
 			children = (
 				7DF293BF2ABF413900414A6D /* NotesUITests.swift */,
 				7DF293C12ABF413900414A6D /* NotesUITestsLaunchTests.swift */,
 			);
-			path = NotesUITests;
+			path = PostnoteUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7DF2939F2ABF413800414A6D /* Notes */ = {
+		7DF2939F2ABF413800414A6D /* Postnote */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7DF293C52ABF413900414A6D /* Build configuration list for PBXNativeTarget "Notes" */;
+			buildConfigurationList = 7DF293C52ABF413900414A6D /* Build configuration list for PBXNativeTarget "Postnote" */;
 			buildPhases = (
 				7DF2939C2ABF413800414A6D /* Sources */,
 				7DF2939D2ABF413800414A6D /* Frameworks */,
@@ -241,17 +241,17 @@
 			);
 			dependencies = (
 			);
-			name = Notes;
+			name = Postnote;
 			packageProductDependencies = (
 				7D70A68D2AD6D32900856337 /* SwiftUIMasonry */,
 			);
 			productName = Notes;
-			productReference = 7DF293A02ABF413800414A6D /* Notes.app */;
+			productReference = 7DF293A02ABF413800414A6D /* Postnote.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7DF293B02ABF413900414A6D /* NotesTests */ = {
+		7DF293B02ABF413900414A6D /* PostnoteTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7DF293C82ABF413900414A6D /* Build configuration list for PBXNativeTarget "NotesTests" */;
+			buildConfigurationList = 7DF293C82ABF413900414A6D /* Build configuration list for PBXNativeTarget "PostnoteTests" */;
 			buildPhases = (
 				7DF293AD2ABF413900414A6D /* Sources */,
 				7DF293AE2ABF413900414A6D /* Frameworks */,
@@ -262,14 +262,14 @@
 			dependencies = (
 				7DF293B32ABF413900414A6D /* PBXTargetDependency */,
 			);
-			name = NotesTests;
+			name = PostnoteTests;
 			productName = NotesTests;
-			productReference = 7DF293B12ABF413900414A6D /* NotesTests.xctest */;
+			productReference = 7DF293B12ABF413900414A6D /* PostnoteTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		7DF293BA2ABF413900414A6D /* NotesUITests */ = {
+		7DF293BA2ABF413900414A6D /* PostnoteUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7DF293CB2ABF413900414A6D /* Build configuration list for PBXNativeTarget "NotesUITests" */;
+			buildConfigurationList = 7DF293CB2ABF413900414A6D /* Build configuration list for PBXNativeTarget "PostnoteUITests" */;
 			buildPhases = (
 				7DF293B72ABF413900414A6D /* Sources */,
 				7DF293B82ABF413900414A6D /* Frameworks */,
@@ -280,9 +280,9 @@
 			dependencies = (
 				7DF293BD2ABF413900414A6D /* PBXTargetDependency */,
 			);
-			name = NotesUITests;
+			name = PostnoteUITests;
 			productName = NotesUITests;
-			productReference = 7DF293BB2ABF413900414A6D /* NotesUITests.xctest */;
+			productReference = 7DF293BB2ABF413900414A6D /* PostnoteUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -308,7 +308,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7DF2939B2ABF413800414A6D /* Build configuration list for PBXProject "Notes" */;
+			buildConfigurationList = 7DF2939B2ABF413800414A6D /* Build configuration list for PBXProject "Postnote" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -324,9 +324,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7DF2939F2ABF413800414A6D /* Notes */,
-				7DF293B02ABF413900414A6D /* NotesTests */,
-				7DF293BA2ABF413900414A6D /* NotesUITests */,
+				7DF2939F2ABF413800414A6D /* Postnote */,
+				7DF293B02ABF413900414A6D /* PostnoteTests */,
+				7DF293BA2ABF413900414A6D /* PostnoteUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -399,12 +399,12 @@
 /* Begin PBXTargetDependency section */
 		7DF293B32ABF413900414A6D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7DF2939F2ABF413800414A6D /* Notes */;
+			target = 7DF2939F2ABF413800414A6D /* Postnote */;
 			targetProxy = 7DF293B22ABF413900414A6D /* PBXContainerItemProxy */;
 		};
 		7DF293BD2ABF413900414A6D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7DF2939F2ABF413800414A6D /* Notes */;
+			target = 7DF2939F2ABF413800414A6D /* Postnote */;
 			targetProxy = 7DF293BC2ABF413900414A6D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -531,11 +531,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Notes/Notes.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Postnote/Postnote.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"Notes/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Postnote/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -553,7 +553,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.6;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.adrianotelesc.Notes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adrianotelesc.Postnote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -568,11 +568,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Notes/Notes.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Postnote/Postnote.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"Notes/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Postnote/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -590,7 +590,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.6;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.adrianotelesc.Notes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adrianotelesc.Postnote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -619,7 +619,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Notes.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Notes";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Postnote.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Postnote";
 			};
 			name = Debug;
 		};
@@ -642,7 +642,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Notes.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Notes";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Postnote.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Postnote";
 			};
 			name = Release;
 		};
@@ -693,7 +693,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7DF2939B2ABF413800414A6D /* Build configuration list for PBXProject "Notes" */ = {
+		7DF2939B2ABF413800414A6D /* Build configuration list for PBXProject "Postnote" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7DF293C32ABF413900414A6D /* Debug */,
@@ -702,7 +702,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7DF293C52ABF413900414A6D /* Build configuration list for PBXNativeTarget "Notes" */ = {
+		7DF293C52ABF413900414A6D /* Build configuration list for PBXNativeTarget "Postnote" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7DF293C62ABF413900414A6D /* Debug */,
@@ -711,7 +711,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7DF293C82ABF413900414A6D /* Build configuration list for PBXNativeTarget "NotesTests" */ = {
+		7DF293C82ABF413900414A6D /* Build configuration list for PBXNativeTarget "PostnoteTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7DF293C92ABF413900414A6D /* Debug */,
@@ -720,7 +720,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7DF293CB2ABF413900414A6D /* Build configuration list for PBXNativeTarget "NotesUITests" */ = {
+		7DF293CB2ABF413900414A6D /* Build configuration list for PBXNativeTarget "PostnoteUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7DF293CC2ABF413900414A6D /* Debug */,
