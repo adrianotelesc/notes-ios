@@ -7,24 +7,24 @@
 
 import Foundation
 
-class NoteEditingViewModel: ObservableObject {
+class NoteEditorViewModel: ObservableObject {
     private let noteRepo: NoteRepository
     
-    @Published var uiState = NoteEditingUiState()
+    @Published private(set) var uiState = NoteEditorUiState()
     
-    init(noteId: String? = nil, noteRepo: NoteRepository) {
+    init(noteId: String?, noteRepo: NoteRepository) {
         self.noteRepo = noteRepo
 
         if let noteId = noteId {
             if let existingNote = noteRepo.findBy(id: noteId) {
-                self.uiState = NoteEditingUiState(note: existingNote)
+                self.uiState = NoteEditorUiState(note: existingNote)
             }
         }
     }
 
     func updateNote(text: String) {
         let changedNote = uiState.note.copy(text: text)
-        self.uiState = NoteEditingUiState(note: changedNote)
+        self.uiState = NoteEditorUiState(note: changedNote)
         noteRepo.update(note: changedNote)
     }
 }

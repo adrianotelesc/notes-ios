@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct NoteEditingUiState {
+struct NoteEditorUiState {
     let note: Note
     
     init(note: Note = Note()) {

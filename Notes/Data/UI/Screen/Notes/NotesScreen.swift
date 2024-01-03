@@ -22,14 +22,8 @@ struct NotesScreen: View {
             ScrollView(.vertical) {
                 VMasonry(columns: 2, spacing: 8) {
                     ForEach(viewModel.uiState.notes, id: \.id) { note in
-                        NavigationLink(destination: NoteEditingScreen(noteId: note.id, dependencies: dependencies)) {
-                            Text(note.text)
-                                .lineLimit(10)
-                                .truncationMode(.tail)
-                                .frame(maxWidth: .infinity, alignment: .topLeading)
-                                .padding(16)
-                                .background(Color(uiColor: .secondarySystemBackground))
-                                .cornerRadius(8)
+                        NavigationLink(destination: NoteEditorScreen(noteId: note.id, dependencies: dependencies)) {
+                            StickyNote(text: note.text)
                         }
                         .buttonStyle(PlainButtonStyle())
                     }
@@ -50,7 +44,7 @@ struct NotesScreen: View {
                         Text(text)
                             .padding(EdgeInsets(top: 0, leading: 40, bottom: 0, trailing: 0))
                         Spacer()
-                        NavigationLink(destination: NoteEditingScreen(dependencies: dependencies)) {
+                        NavigationLink(destination: NoteEditorScreen(dependencies: dependencies)) {
                             Image(systemName: "square.and.pencil").imageScale(.large)
                         }
                     }

@@ -9,13 +9,14 @@ import Foundation
 import Combine
 
 class NoteRepositoryImpl: NoteRepository {
-    private var notesSubject = CurrentValueSubject<[Note], Never>([])
+    private var _notes = CurrentValueSubject<[Note], Never>([])
+
     var notes: AnyPublisher<[Note], Never> {
-        notesSubject.eraseToAnyPublisher()
+        _notes.eraseToAnyPublisher()
     }
     
     func findBy(id: String) -> Note? {
-        notesSubject.value.first(where: { note in note.id == id })
+        _notes.value.first(where: { note in note.id == id })
     }
     
     func update(note: Note) {
@@ -32,25 +33,25 @@ class NoteRepositoryImpl: NoteRepository {
     
     func add(note: Note) {
         guard note.isNotEmpty else { return }
-        sendNotesSubject { (notes: inout [Note]) in
+        sendNotes { (notes: inout [Note]) in
             notes.insert(note, at: 0)
         }
     }
     
-    private func sendNotesSubject(block: (inout [Note]) -> Void) {
-        var notes = notesSubject.value
+    private func sendNotes(block: (inout [Note]) -> Void) {
+        var notes = _notes.value
         block(&notes)
-        notesSubject.send(notes)
+        _notes.send(notes)
     }
     
     func remove(note: Note) {
-        sendNotesSubject { (notes: inout [Note]) in
+        sendNotes { (notes: inout [Note]) in
             notes.removeAll { item in item.id == note.id }
         }
     }
     
     func replace(oldNote: Note, newNote: Note) {
-        sendNotesSubject { (notes: inout [Note]) in
+        sendNotes { (notes: inout [Note]) in
             let index = notes.firstIndex(where: { note in oldNote.id == note.id }) ?? 0
             notes.remove(at: index)
             notes.insert(newNote, at: index)

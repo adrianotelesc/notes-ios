@@ -10,9 +10,10 @@ import Combine
 
 class NotesViewModel: ObservableObject {
     private let noteRepo: NoteRepository
-    private var notesSubscription: AnyCancellable? = nil
+
+    private var notesCancellable: AnyCancellable? = nil
     
-    @Published var uiState = NotesUiState()
+    @Published private(set) var uiState = NotesUiState()
     
     init(noteRepo: NoteRepository) {
         self.noteRepo = noteRepo
@@ -21,12 +22,12 @@ class NotesViewModel: ObservableObject {
     }
     
     func loadNotes() {
-        notesSubscription = noteRepo.notes.sink { notes in
+        notesCancellable = noteRepo.notes.sink { notes in
             self.uiState = NotesUiState(notes: notes)
         }
     }
     
     deinit {
-        notesSubscription?.cancel()
+        notesCancellable?.cancel()
     }
 }
