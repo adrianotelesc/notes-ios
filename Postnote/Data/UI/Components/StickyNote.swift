@@ -24,3 +24,9 @@ struct StickyNote: View {
             .cornerRadius(8)
     }
 }
+
+struct StickyNotePreview: PreviewProvider {
+    static var previews: some View {
+        StickyNote(text: "Note here")
+    }
+}

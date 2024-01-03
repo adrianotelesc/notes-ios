@@ -35,3 +35,10 @@ struct NoteEditorScreen: View {
             .textInputAutocapitalization(.none)
     }
 }
+
+struct NoteEditorScreenPreview: PreviewProvider {
+    static var previews: some View {
+        NoteEditorScreen(dependencies: Dependencies())
+            .environmentObject(Dependencies())
+    }
+}

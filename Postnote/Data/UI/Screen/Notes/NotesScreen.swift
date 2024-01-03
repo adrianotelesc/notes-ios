@@ -54,3 +54,10 @@ struct NotesScreen: View {
         
     }
 }
+
+struct NotesScreenPreview: PreviewProvider {
+    static var previews: some View {
+        NotesScreen(dependencies: Dependencies())
+            .environmentObject(Dependencies())
+    }
+}
