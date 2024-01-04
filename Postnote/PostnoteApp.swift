@@ -12,7 +12,7 @@ class Dependencies: ObservableObject {
 }
 
 @main
-struct NotesApp: App {
+struct PostnoteApp: App {
     @StateObject private var dependencies = Dependencies()
     
     var body: some Scene {
