@@ -7,18 +7,18 @@
 
 import SwiftUI
 
-class Dependencies: ObservableObject {
+class DependencyContainer: ObservableObject {
     let noteRepo: NoteRepository = NoteRepositoryImpl()
 }
 
 @main
 struct PostnoteApp: App {
-    @StateObject private var dependencies = Dependencies()
+    @StateObject private var dependencyContainer = DependencyContainer()
     
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(dependencies)
+                .environmentObject(dependencyContainer)
         }
     }
 }

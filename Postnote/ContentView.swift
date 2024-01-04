@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject private var dependencies: Dependencies
+    @EnvironmentObject private var dependencyContainer: DependencyContainer
     
     var body: some View {
-        NotesScreen(dependencies: dependencies)
+        NotesView(dependencyContainer: dependencyContainer)
     }
 }
 
 struct ContentViewPreview: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(Dependencies())
+            .environmentObject(DependencyContainer())
     }
 }

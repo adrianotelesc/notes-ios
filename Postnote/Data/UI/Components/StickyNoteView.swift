@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct StickyNote: View {
+struct StickyNoteView: View {
     var text: String = ""
     
     init(text: String) {
@@ -25,8 +25,8 @@ struct StickyNote: View {
     }
 }
 
-struct StickyNotePreview: PreviewProvider {
+struct StickyNoteViewPreview: PreviewProvider {
     static var previews: some View {
-        StickyNote(text: "Note here")
+        StickyNoteView(text: "Note here")
     }
 }

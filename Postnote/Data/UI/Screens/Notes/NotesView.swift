@@ -8,22 +8,24 @@
 import SwiftUI
 import SwiftUIMasonry
 
-struct NotesScreen: View {
-    @EnvironmentObject private var dependencies: Dependencies
+struct NotesView: View {
+    @StateObject private var viewModel: ViewModel
     
-    @StateObject private var viewModel: NotesViewModel
+    private var dependencyContainer: DependencyContainer
 
-    init(dependencies: Dependencies) {
-        _viewModel = StateObject(wrappedValue: NotesViewModel(noteRepo: dependencies.noteRepo))
+    init(dependencyContainer: DependencyContainer) {
+        self.dependencyContainer = dependencyContainer
+        
+        _viewModel = StateObject(wrappedValue: ViewModel(noteRepo: dependencyContainer.noteRepo))
     }
     
     var body: some View {
         NavigationView {
             ScrollView(.vertical) {
                 VMasonry(columns: 2, spacing: 8) {
-                    ForEach(viewModel.uiState.notes, id: \.id) { note in
-                        NavigationLink(destination: NoteEditorScreen(noteId: note.id, dependencies: dependencies)) {
-                            StickyNote(text: note.text)
+                    ForEach(viewModel.notes, id: \.id) { note in
+                        NavigationLink(destination: NoteEditorView(noteId: note.id, dependencyContainer: dependencyContainer)) {
+                            StickyNoteView(text: note.text)
                         }
                         .buttonStyle(PlainButtonStyle())
                     }
@@ -32,7 +34,7 @@ struct NotesScreen: View {
             }
             .navigationTitle("Notes")
             .toolbar {
-                let noteCount = viewModel.uiState.notes.count
+                let noteCount = viewModel.notes.count
                 let text = if (noteCount > 0) {
                     String(AttributedString(localized: "^[\(noteCount) Note](inflect: true)").characters)
                 } else {
@@ -44,7 +46,7 @@ struct NotesScreen: View {
                         Text(text)
                             .padding(EdgeInsets(top: 0, leading: 40, bottom: 0, trailing: 0))
                         Spacer()
-                        NavigationLink(destination: NoteEditorScreen(dependencies: dependencies)) {
+                        NavigationLink(destination: NoteEditorView(dependencyContainer: dependencyContainer)) {
                             Image(systemName: "square.and.pencil").imageScale(.large)
                         }
                     }
@@ -55,9 +57,8 @@ struct NotesScreen: View {
     }
 }
 
-struct NotesScreenPreview: PreviewProvider {
+struct NotesViewPreview: PreviewProvider {
     static var previews: some View {
-        NotesScreen(dependencies: Dependencies())
-            .environmentObject(Dependencies())
+        NotesView(dependencyContainer: DependencyContainer())
     }
 }
