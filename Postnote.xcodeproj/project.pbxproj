@@ -93,20 +93,20 @@
 		7D140FBC2AC65F2200B7FF0D /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				7DB69C3A2B407017000CF6D2 /* Components */,
-				7D140FBD2AC65F2900B7FF0D /* Screens */,
+				7DB69C3A2B407017000CF6D2 /* Component */,
+				7D140FBD2AC65F2900B7FF0D /* Screen */,
 			);
 			name = UI;
 			path = Data/UI;
 			sourceTree = "<group>";
 		};
-		7D140FBD2AC65F2900B7FF0D /* Screens */ = {
+		7D140FBD2AC65F2900B7FF0D /* Screen */ = {
 			isa = PBXGroup;
 			children = (
 				7D3749F82B0F62BB00F6D5DD /* Note Editor */,
 				7D140FBE2AC65F3C00B7FF0D /* Notes */,
 			);
-			path = Screens;
+			path = Screen;
 			sourceTree = "<group>";
 		};
 		7D140FBE2AC65F3C00B7FF0D /* Notes */ = {
@@ -127,38 +127,38 @@
 			path = "Note Editor";
 			sourceTree = "<group>";
 		};
-		7DB69C3A2B407017000CF6D2 /* Components */ = {
+		7DB69C3A2B407017000CF6D2 /* Component */ = {
 			isa = PBXGroup;
 			children = (
 				7DA2D03A2B45D06A00528CBE /* StickyNoteView.swift */,
 			);
-			path = Components;
+			path = Component;
 			sourceTree = "<group>";
 		};
 		7DEAF2BF2AC656B000B6D6BC /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				7DEAF2C32AC656DD00B6D6BC /* Repositories */,
-				7DEAF2C22AC656CB00B6D6BC /* Models */,
+				7DEAF2C32AC656DD00B6D6BC /* Repository */,
+				7DEAF2C22AC656CB00B6D6BC /* Model */,
 			);
 			path = Data;
 			sourceTree = "<group>";
 		};
-		7DEAF2C22AC656CB00B6D6BC /* Models */ = {
+		7DEAF2C22AC656CB00B6D6BC /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				7DEAF2C42AC656EE00B6D6BC /* Note.swift */,
 			);
-			path = Models;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		7DEAF2C32AC656DD00B6D6BC /* Repositories */ = {
+		7DEAF2C32AC656DD00B6D6BC /* Repository */ = {
 			isa = PBXGroup;
 			children = (
 				7DEAF2C02AC656C500B6D6BC /* NoteRepository.swift */,
 				7DEAF2C62AC656FD00B6D6BC /* NoteRepositoryImpl.swift */,
 			);
-			path = Repositories;
+			path = Repository;
 			sourceTree = "<group>";
 		};
 		7DF293972ABF413800414A6D = {
